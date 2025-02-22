@@ -1,0 +1,331 @@
+/* color palette: 7886C7, B2A5FF, 493D9E, 344CB7*/
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    width: 100%;
+    color:black;
+    font-size: 15px;
+    line-height: 1.1;
+    background: radial-gradient( #A1E3F9, #A9B5DF);
+    font-family: 'Open Sans';
+    font-weight: medium;
+    
+    
+}
+
+header{
+    height: 7vh;
+    margin: auto;
+    width: 100%;
+    padding-top: 5px ;
+}
+
+section.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px auto;
+    width: 90%;
+    max-height: 90%;
+    height: 100%;
+}
+.location-date{
+    height: 100%;
+    padding: 5px 0;
+
+
+}
+.location-date > p{
+    padding: 5px 0px 0px;
+}
+
+/*style the nav*/
+ .sidebar-btn{
+    background-color: transparent;
+    position: fixed;
+    cursor: pointer;
+    right: 10px;
+    top:10px;
+    box-shadow: 1.5px 2.5px 2.5px #a1c9f196, 2.5px 2.5px 3.6px 0.1px rgba(19, 18, 18, 0.209);
+   
+}
+.sidebar-btn:hover, .sidebar-btn:active{
+    translate: ScaleY(-2px);
+    background-color: #3674B5;
+}
+
+.link-nav{
+    background-color: #346092;
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    height: 93vh;
+    width: 0;
+    overflow-x: hidden;
+    transition: width 0.25s ease-in-out;
+    border-radius: 3px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 16px;
+}
+.profile, .search-container, .sign-out{
+    padding-left: 15px;
+    color: white;
+    font-size: 16px;
+    font-style: oblique;
+    text-decoration: none;
+    text-indent: 2px;
+    width: 85%;
+}
+input[type=search]{
+    width: 95%;
+    margin: 10px 0;
+    padding: 10px 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #D9EAFD;
+    background-color: #e9edf0c9;
+    box-shadow: 1px 1.5px 2px  #e9edf0c9, 2px 1px 3px 1px #212324b3, inset 0.5px 1px 3.5px 0.5px rgba(44, 43, 43, 0.673);
+}
+ input[type=search]:focus{
+    outline: 2px solid black;
+ }
+
+ button.search-onclick{
+    width: 70%;
+    margin: 5px 0;
+    padding: 8px 6px;
+    border-radius: 3px;
+    background-color: #DD88CF;
+    font-size: 16px;
+    box-shadow: 1.5px 3px 2.5px #544152, 2.5px 4px 3.6px 0.5px rgba(19, 18, 18, 0.209);
+    transition: translate 0.3seconds ease-in-out;
+ }
+
+ button.search-onclick:hover, button.search-onclick:active{
+    translate: ScaleY(-2px);
+    background-color: #e673d3;
+ }
+/*STYLE THE MAIN*/
+.main{
+    height: 90%;
+}
+section.current-location-weather-details{
+    width: 70%;
+    margin: 15px auto 10px;
+    height: calc(22.5% -25px);
+    text-align: center;
+}
+div.current-weather{
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    
+}
+ .temp-range {
+    text-align: center;
+    font-size: 18px;
+}
+/*styling of the main section that contains all the weather details*/
+
+section.threehourly-weather{
+    height: calc(76.5% - 25px);
+    border: 1px solid black;
+    max-width: 90%; 
+    margin: 25px auto 0px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    border-radius: 9px;
+    
+}
+.next-7days-option{
+    display: flex;
+    justify-content: space-between;
+    max-height: 5%;
+    padding: 5px;
+    margin: 5px;
+}
+.next-7days-option a{
+    text-decoration: none;
+    color: black;
+}
+.next-7days-option a:hover, .next-7days-option a:focus{
+    color: #063f78;
+    
+}
+.next-7days-option a:active{
+    color: #224976
+}
+/*style the section that shows only weather details*/
+.each-3hour{
+    display: flex;
+    flex-direction: column;
+    height: 94%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 95% ;
+    /* border: 1px solid black; */
+    margin: auto;
+    padding: 0px;
+}
+/*style the section that shows each specific hour weather details*/
+.selected-hour-weather-details{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 40%;
+    /* border: 0.5px solid grey; */
+    margin: 10px auto 5px ;
+    overflow: auto;
+}
+/*style the individual hours and it's icons*/
+.specific-hours{
+    background-color: #3674B5;
+    padding: 4px;
+    min-width:  calc(27.8% - 44px);
+    max-width: calc(27.8% - 44px);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-radius: 13px;
+    text-align: center;
+    transition: transform 0.20s ease-in-out;
+    box-shadow: 1.5px 2.5px 2.5px #696a6b96, 2.5px 2.5px 3.6px 0.1px rgba(49, 48, 48, 0.405);
+}
+
+.specific-hours:hover{
+    border-radius: 15px;
+    transform: Scale(1.2);
+    background-color: #346092;
+    box-shadow: 1.5px 3px 3px #696a6b96, 2.5px 2.5px 3px rgba(49, 48, 48, 0.405);
+    
+
+}
+/*style the elaborated weather details such as wind humidity*/
+.elaborated-weather-details{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 0.5px solid grey; */
+    margin:  5px auto 10px;
+    justify-content: space-evenly;
+}
+/* the below styles the two section that contains wind and visibility and humidity and precipitation respectively*/
+.wet-like-details-section, .wind-visibility-section{
+    height: 48%;
+    width: 95%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.wind-visibility-container{
+    width: 72%;
+}
+
+div.main-weather{
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-height: 90%;
+    
+    
+}
+
+
+/*style the wind and visibility with image container*/
+
+/*style the wind specific part*/
+/*style the picture of the wind*/
+.wind, .visibility{
+    height: 46%;
+    width: 95%;
+    position: relative;
+    /* border: 1px solid black; */
+    padding: 5px 5px 0px;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.line-divider{
+    width: 100%;
+    position: relative;
+    margin: 3px 0;
+    border: 0.5px solid grey;
+}
+/*style the wind image */
+.wind-picture-container{
+    width: 24%;
+}
+
+img.picture-of-wind{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*style visibilty text and icons*/
+.eye-and-text-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.eye{
+    flex-grow: 0;
+    flex-shrink: 0; 
+    position: absolute;
+    top: 3px;
+    margin-right: 5px;
+    padding: 0;
+}
+.visibility-text{
+    margin-left: 8px;
+    padding-bottom: 2px;
+}
+
+/*style precipitation*/
+div.precipitation-icon{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border-top-right-radius: 2px;
+    transform: rotate(-40deg);
+    background-color: #A1E3F9;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    margin-right: 3px;
+}
+.precipitation, .humidity{
+    margin: auto 0px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 6px;
+    position: relative;
+    border: 0.5px solid black;
+    width: 48%;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}

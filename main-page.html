@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Precious Weather App</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-- Contains heading and side-bar content -->
+            <section class="header-container">
+                <div class="location-date">
+                    <p class="location" id="current-city">Lagos</p>
+                    <p class="current-date" id="current-date">23/01/2025</p>
+                </div>
+                
+                <!--sidenav button-->
+                <div class="dropdown">
+                    <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                    <label for="nav-toggle" class="side-bar-btn"><img class="sidebar-btn-img" src="./images/Hamburger menu.svg" alt="sidebar-button-imageg"></label> -->
+                    <button id="sidebar-btn" class="sidebar-btn"><img class="sidebar-btn-img" src="./images/Hamburger menu.svg" alt="sidebar-button-image"></button>
+                    <!-- to display the below on click of the above button-->
+                </div>
+            </section>
+        </header>
+
+        <!-- Hidden link nav-->
+        <div id="link-nav" class="link-nav">
+            <span class="profile">
+                <a href="#">Profile</a>
+                <img class="profile-picture"/>
+            </span>
+
+            <!--search input-->
+            <div class="search-container">
+                <!-- <form  action="/action_page.php" method="get"> -->
+                <label for="search-city">Search for a city</label>
+                <input type="search" name="search" id="search-city" placeholder="Search...">
+                <button class="search-onclick" id="weather-search-btn">Enter</button>
+                <!-- </form>  -->
+                
+            </div>
+            <!--to signout-below-->
+            <a href="#" class="sign-out">Sign Out</a>
+        </div>
+
+
+        <!--main document with the current location weather details-->
+        <main class="main">
+            <section class="current-location-weather-details">
+                <div class="current-weather">
+                    <p class="temperature" id="actual-temp"></p>
+                      <span class="temp-range" id="high-temp"></span>
+                      <span class="temp-range" id="low-temp"></span>
+                </div>
+            </section>
+            <!--Hourly weather details-->
+            <section class="threehourly-weather">
+                <div class="next-7days-option"><span class="selected-day">Today</span> <a href="./nextFiveDaysForecast.html">Next 7 days</a></div>
+                <div class="each-3hour">
+                    <div class="selected-hour-weather-details" id="selected-hour-weather-details">
+
+                        <div class="specific-hours">
+                            <span class="forecasttime">00:00</span>
+                            <img class="weather-icon" src="" alt="weather icon"/>
+                            <span class="forecasttemp">4°</span>
+                        </div>
+
+                        <div class="specific-hours">
+                            <span class="forecasttime">01:00</span>
+                            <img class="weather-icon" src="" alt="weather icon"/>
+                            <span class="forecasttemp">5•</span>
+                        </div>
+
+                        <div class="specific-hours">
+                            <span class="forecasttime">02:00</span>
+                            <img class="weather-icon" src="" alt="weather icon"/>
+                            <span class="forecasttemp">5•</span>
+                        </div>
+
+                        <div class="specific-hours">
+                            <span class="forecasttime">03:00</span>
+                            <img class="weather-icon" src="" alt="weather icon"/>
+                            <span class="forecasttemp">5•</span>
+                        </div>
+
+                        <div class="specific-hours">
+                            <span class="forecasttime">04:00</span>
+                            <img class="weather-icon" src="" alt="weather icon"/>
+                            <span class="forecasttemp">5•</span>
+                        </div>
+
+                        <div class="specific-hours">
+                            <span class="forecasttime">05:00</span>
+                            <img class="weather-icon" src="" alt="weather icon"/>
+                            <span class="forecasttemp">5•</span>
+                        </div>
+                    </div>
+                    
+                    <!-- contains each specific wethater deatils like wind, humidity-->
+                    <div class="elaborated-weather-details">
+                        <section class="wind-visibility-section">
+                            
+                            <div class="wind-visibility-container main-weather">
+                                <div class="wind">
+                                    <span class="wind-text">Wind</span>
+                                    <p><span class="wind-value" id="wind-speed-per-hour">12</span>MPH</p>
+                                </div>
+
+                                <div class="line-divider"></div>
+                                <div class="visibility">
+
+                                    <div class="eye-and-text-container">
+                                        <div class="eye-container"><img class="eye" src="./images/Eye.svg" alt="eye-icon"/></div>
+                                        <span class="visibility-text">Visibility</span> 
+                                    </div>
+                                    <p>Perfectly clear view for <span class="visibility-mile">20 mi</span></p>
+                                </div>
+                            </div>
+                            <div class="main-weather wind-picture-container" ><img class="picture-of-wind" src="./images/Vento ícone Vector PNG , Clipart De Vento, ícones Do Vento, Clima Imagem PNG e Vetor Para Download Gratuito.jpg" alt="picture of a wind"></div>   
+                        </section>
+
+                        <!--contains wet and water related weather details-->
+                        <section class="wet-like-details-section">
+                            <!--contains icon, number details and comment-->
+
+                            <div class="precipitation main-weather">
+                                <div class="precipitation-icon"></div> 
+                                <span>Precipitation</span>
+                                <h4>1mm in the last 24hours</h4>
+                            </div>
+
+                            <div class="humidity main-weather">
+                                <div class="humidity-icon"></div>
+                                <span>Humidity</span>
+                                 <h4 id="humidity-percent">66%</h4>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>

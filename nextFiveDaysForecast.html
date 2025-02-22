@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Precious Weather App, Five Days Forecast</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="daysForecastStyles.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="fivedaysForecast-header">
+            <!-- Contains heading and side-bar content -->
+            <section class="header-container">
+                        <!-- button to go back to the main page -->
+                <a href="main-page.html" class="main-page-link">
+                    <button id="back-to-mainpage-btn"><img class="back-to-main-page-img" src="./images/Arrow left.svg" alt="back-to main page"/>
+                    </button>
+                </a>
+                
+            
+                <!--sidenav button-->
+                <div class="dropdown">
+                    <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                    <label for="nav-toggle" class="side-bar-btn"><img class="sidebar-btn-img" src="./images/Hamburger menu.svg" alt="sidebar-button-imageg"></label> -->
+                    <button id="sidebar-btn" class="sidebar-btn"><img class="sidebar-btn-img" src="./images/Hamburger menu.svg" alt="sidebar-button-image"></button>
+                    <!-- to display the below on click of the above button-->
+                </div>
+            </section>
+        </header>
+
+
+        <!-- this div contains the side bar for searching city -->
+        <div id="link-nav" class="link-nav">
+            <span class="profile">
+                <a href="#">Profile</a>
+                <img class="profile-picture"/>
+            </span>
+
+            <!--search input-->
+            <div class="search-container">
+
+                <label for="search-city">Search for a city</label>
+                <input type="search" name="search" id="search-city">
+                <button class="search-onclick" id="weather-search-btn"><i class="icons"></i> </button>
+                
+            </div>
+            <!--to signout-below-->
+            <a href="#">Sign Out</a>
+        </div>
+
+        <main>
+        <!-- contains the current location and current weather temp -->
+          <section class="fivedaysForecast-location-container">
+                <p class="daily-forecast-location" id="current-city">Lagos</p>
+                <p class="daily-forecast-temperature" id="actual-temp">4° Cloudy</p>
+           </section>
+      
+         <div class="daily-forecast"> 
+
+               <div class="each-day-forecast">
+                   <div class="day-image-container">
+                    <p class="day">Thu</p>
+                    <img/>
+                   </div>
+                   <div class="day-and-rangebar-container">
+                      <p class="temp-range low">2.</p>
+                      <div class="range-bar-outer-container">
+                          <div class="range-bar-inner-container"></div>
+                      </div>
+                      <p class="temp-range low">2.</p>
+                   </div>
+               </div>
+
+              <div class="each-day-forecast">
+                   <div class="day-image-container">
+                     <p class="day">Thu</p>
+                     <img/>
+                   </div>
+                   <div class="day-and-rangebar-container">
+                     <p class="temp-range low">2.</p>
+                     <div class="range-bar-outer-container">
+                         <div class="range-bar-inner-container"></div>
+                     </div>
+                     <p class="temp-range low">2.</p>
+                   </div>
+              </div>
+
+              <div class="each-day-forecast">
+                  <div class="day-image-container">
+                     <p class="day">Thu</p>
+                     <img/>
+                  </div>
+                  <div class="day-and-rangebar-container">
+                     <p class="temp-range low">2.</p>
+                     <div class="range-bar-outer-container">
+                         <div class="range-bar-inner-container"></div>
+                     </div>
+                     <p class="temp-range low">2.</p>
+                   </div>
+              </div>
+              <div class="each-day-forecast">
+                 <div class="day-image-container">
+                     <p class="day">Thu</p>
+                     <img/>
+                  </div>
+                  <div class="day-and-rangebar-container">
+                     <p class="temp-range low">2.</p>
+                     <div class="range-bar-outer-container">
+                         <div class="range-bar-inner-container"></div>
+                     </div>
+                     <p class="temp-range low">2.</p>
+                   </div>
+              </div>
+
+              <div class="each-day-forecast">
+                  <div class="day-image-container">
+                      <p class="day">Thu</p>
+                      <img/>
+                   </div>
+                   <div class="day-and-rangebar-container">
+                       <p class="temp-range low">2.</p>
+                       <div class="range-bar-outer-container">
+                           <div class="range-bar-inner-container"></div>
+                       </div>
+                       <p class="temp-range low">2.</p>
+                  </div>
+               </div>
+          </div>
+
+        </main>
+        <script src="./fivedaysForecast.js"></script>
+    </body>
+</html>
