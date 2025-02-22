@@ -32,7 +32,7 @@
     }
   }
   getWeather();
-
+// howdddy do, trying to learn git hub
 
   //   fetch forecast details from api for the main page
 
