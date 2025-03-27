@@ -29,6 +29,8 @@ async function getForecastPageWeather() {
   getForecastPageWeather();
  
 
+//   extract 5 days forecast
+
 function displayCurrentWeatherOnForecastPage(data){
     if(window.location.pathname === '/nextFiveDaysForecast.html'){
         const actualTemp = document.getElementById('actual-temp');
