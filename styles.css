@@ -214,6 +214,8 @@ section.threehourly-weather{
     border-radius: 15px;
     transform: Scale(1.2);
     background-color: #346092;
+    margin-right: 10px;
+    margin-left: 10px;
     box-shadow: 1.5px 3px 3px #696a6b96, 2.5px 2.5px 3px rgba(49, 48, 48, 0.405);
     
 
